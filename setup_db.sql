@@ -12,10 +12,10 @@ INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio, socket) 
     ('CPU', 'Intel', 'i3-7100', '{"nucleos": 2, "frecuencia": 3.9, "tdp": 51}', 100, 'LGA1200'),
     ('CPU', 'Intel', 'i5-8400', '{"nucleos": 6, "frecuencia": 2.8, "tdp": 65}', 200, 'LGA1200'),
     ('CPU', 'Intel', 'i7-9700K', '{"nucleos": 8, "frecuencia": 3.6, "tdp": 95}', 350, 'LGA1200'),
-    ('CPU', 'AMD', 'Ryzen 5 3600', '{"nucleos": 6, "frecuencia": 3.6, "tdp": 65}', 200, 'AMD4'),
-    ('CPU', 'AMD', 'Ryzen 7 3700X', '{"nucleos": 8, "frecuencia": 3.6, "tdp": 65}', 300, 'AMD4'),
+    ('CPU', 'AMD', 'Ryzen 5 3600', '{"nucleos": 6, "frecuencia": 3.6, "tdp": 65}', 200, 'AM4'),
+    ('CPU', 'AMD', 'Ryzen 7 3700X', '{"nucleos": 8, "frecuencia": 3.6, "tdp": 65}', 300, 'AM4'),
     ('CPU', 'Intel', 'i9-12900K', '{"nucleos": 8, "frecuencia": 3.6, "tdp": 95}', 500, 'LGA1700'),
-    ('CPU', 'AMD', 'Ryzen 9 5900X', '{"nucleos": 12, "frecuencia": 3.8, "tdp": 105}', 400, 'AMD5');
+    ('CPU', 'AMD', 'Ryzen 9 5900X', '{"nucleos": 12, "frecuencia": 3.8, "tdp": 105}', 400, 'AM5');
 
 INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio) VALUES 
     ('GPU', 'NVIDIA', 'GTX 1660', '{"tfLOPS": 5, "vram": 6}', 250),
@@ -30,17 +30,17 @@ INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio) VALUES
     ('GPU', 'AMD', 'RX 6900 XT', '{"tfLOPS": 23.04, "vram": 16}', 900);
 
 INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio, socket) VALUES 
-    ('MB', 'ASUS', 'ROG Strix B450-F', '{"formato": "ATX"}', 120, 'AMD4'),
-    ('MB', 'MSI', 'B450 TOMAHAWK MAX', '{"formato": "ATX"}', 100, 'AMD4'),
-    ('MB', 'Gigabyte', 'X570 AORUS Elite', '{"formato": "ATX"}', 200, 'AMD4'),
+    ('MB', 'ASUS', 'ROG Strix B450-F', '{"formato": "ATX"}', 120, 'AM4'),
+    ('MB', 'MSI', 'B450 TOMAHAWK MAX', '{"formato": "ATX"}', 100, 'AM4'),
+    ('MB', 'Gigabyte', 'X570 AORUS Elite', '{"formato": "ATX"}', 200, 'AM4'),
     ('MB', 'ASUS', 'ROG Strix Z490-E', '{"formato": "ATX"}', 300, 'LGA1200'),
     ('MB', 'MSI', 'Z490-A PRO', '{"formato": "ATX"}', 150, 'LGA1200'),
     ('MB', 'Gigabyte', 'Z490 AORUS Master', '{"formato": "ATX"}', 350, 'LGA1200'),
     ('MB', 'ASUS', 'ROG Strix Z690-E', '{"formato": "ATX"}', 400, 'LGA1700'),
     ('MB', 'MSI', 'Z690-A PRO', '{"formato": "ATX"}', 250, 'LGA1700'),
     ('MB', 'Gigabyte', 'Z690 AORUS Master', '{"formato": "ATX"}', 450, 'LGA1700'),
-    ('MB', 'ASUS', 'ROG Strix X570-E', '{"formato": "ATX"}', 300, 'AMD5'),
-    ('MB', 'MSI', 'X570-A PRO', '{"formato": "ATX"}', 200, 'AMD5');
+    ('MB', 'ASUS', 'ROG Strix X570-E', '{"formato": "ATX"}', 300, 'AM5'),
+    ('MB', 'MSI', 'X570-A PRO', '{"formato": "ATX"}', 200, 'AM5');
 
 INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio) VALUES 
     ('RAM', 'Corsair', 'Vengeance LPX 16GB DDR4 3200MHz', '{"frecuencia": 3200, "capacidad": 16}', 80),
@@ -48,6 +48,6 @@ INSERT INTO componentes (tipo, marca, modelo, especificaciones, precio) VALUES
     ('RAM', 'Kingston', 'HyperX Fury 8GB DDR4 2666MHz', '{"frecuencia": 2666, "capacidad": 8}', 40),
     ('RAM', 'Crucial', 'Ballistix 64GB DDR4 3200MHz', '{"frecuencia": 3200, "capacidad": 64}', 300);
 
-SELECT * FROM componentes WHERE tipo = 'CPU' AND socket = 'AMD4';
-SELECT * FROM componentes WHERE tipo = 'MB' AND socket = 'AMD4';
-SELECT * FROM componentes WHERE tipo = 'MB' AND socket = 'AMD4';
+SELECT * FROM componentes WHERE tipo = 'CPU' AND socket = 'AM4';
+SELECT * FROM componentes WHERE tipo = 'MB' AND socket = 'AM4';
+SELECT * FROM componentes WHERE tipo = 'MB' AND socket = 'AM4';

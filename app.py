@@ -25,7 +25,7 @@ def get_db_connection():
 def index():
     some_url= "http://example.com/some path"
     some_quoted_url= url_quote(some_url)
-    sockets = ['AMD4', 'AMD5', 'LGA1200', 'LGA1700']
+    sockets = ['AM4', 'AM5', 'LGA1200', 'LGA1700']
     return render_template('index.html', sockets=sockets)
 
 @app.route('/components/<socket>')
