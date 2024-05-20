@@ -1,8 +1,16 @@
 from flask import Flask, render_template, request
-
+from flask_sqlalchemy import SQLAlchemy
+from urllib.parse import quote as url_quote 
 import sqlite3
+import json
+import os
 
 app = Flask(__name__, template_folder='docs', static_folder='docs/static')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///path/to/componentes.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
 
 def get_db_connection():
     try:
@@ -15,6 +23,8 @@ def get_db_connection():
 
 @app.route('/')
 def index():
+    some_url= "http://example.com/some path"
+    some_quoted_url= url_quote(some_url)
     sockets = ['AMD4', 'AMD5', 'LGA1200', 'LGA1700']
     return render_template('index.html', sockets=sockets)
 
