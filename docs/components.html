@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de PC - TitanTech</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">TitanTech</a>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Selecciona Componentes</h2>
+        <form action="{{ url_for('calculate') }}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="cpu">CPU</label>
+                <select class="form-control" id="cpu" name="cpu" required>
+                    <option value="">Selecciona una CPU</option>
+                    {% for cpu in cpus %}
+                    <option value="{{ cpu.id }}">{{ cpu.marca }} {{ cpu.modelo }} - ${{ cpu.precio }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mb">Placa Base</label>
+                <select class="form-control" id="mb" name="mb" required>
+                    <option value="">Selecciona una Placa Base</option>
+                    {% for mb in motherboards %}
+                    <option value="{{ mb.id }}">{{ mb.marca }} {{ mb.modelo }} - ${{ mb.precio }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ram">RAM</label>
+                <select class="form-control" id="ram" name="ram" required>
+                    <option value="">Selecciona una RAM</option>
+                    {% for ram in rams %}
+                    <option value="{{ ram.id }}">{{ ram.marca }} {{ ram.modelo }} - ${{ ram.precio }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Calcular</button>
+        </form>
+    </div>
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 TitanTech
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

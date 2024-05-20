@@ -1,0 +1,51 @@
+<!-- codigo index-html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Socket - TitanTech</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TitanTech</a>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Selecciona tu Socket</h2>
+        <div class="row mt-4">
+            <div class="col-md-3 text-center socket-option">
+                <a href="/components/AMD4">
+                    <img src="{{ url_for('static', filename='amd4.jpg') }}" alt="AMD4" class="socket-icon">
+                    <h4>AMD4</h4>
+                </a>
+            </div>
+            <div class="col-md-3 text-center socket-option">
+                <a href="/components/AMD5">
+                    <img src="{{ url_for('static', filename='amd5.jpg') }}" alt="AMD5" class="socket-icon">
+                    <h4>AMD5</h4>
+                </a>
+            </div>
+            <div class="col-md-3 text-center socket-option">
+                <a href="/components/LGA1200">
+                    <img src="{{ url_for('static', filename='intel1200.jpg') }}" alt="Intel LGA 1200" class="socket-icon">
+                    <h4>Intel LGA 1200</h4>
+                </a>
+            </div>
+            <div class="col-md-3 text-center socket-option">
+                <a href="/components/LGA1700">
+                    <img src="{{ url_for('static', filename='intel1700.jpg') }}" alt="Intel LGA 1700" class="socket-icon">
+                    <h4>Intel LGA 1700</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- final codigo index-html-->

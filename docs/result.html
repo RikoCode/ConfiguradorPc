@@ -1,0 +1,34 @@
+<!-- codigo result.html-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - TitanTech</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">TitanTech</a>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Resultado de la Configuración</h2>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Componentes Seleccionados</h5>
+                <p class="card-text"><strong>CPU:</strong> {{ cpu.marca }} {{ cpu.modelo }} - ${{ cpu.precio }}</p>
+                <p class="card-text"><strong>Placa Base:</strong> {{ mb.marca }} {{ mb.modelo }} - ${{ mb.precio }}</p>
+                <p class="card-text"><strong>RAM:</strong> {{ ram.marca }} {{ ram.modelo }} - ${{ ram.precio }}</p>
+                <h5 class="card-title">Costo Total: ${{ total_price }}</h5>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 TitanTech
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net
